@@ -64,6 +64,9 @@ typings/
 ## Custom
 ## ======
 
+.idea
+.DS_Store
+
 # We use it to build stuff
 highlightjs/
 !dist/

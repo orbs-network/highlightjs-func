@@ -32,7 +32,7 @@ export default function(hljs) {
       'keyword': [
         'if', 'ifnot', 'else', 'elseif', 'elseifnot|10',
         'while', 'do', 'until', 'repeat',
-        'return', 'impure', 'method_id',
+        'return', 'impure', 'method_id', 'pure', 'get', 'builtin',
         'forall', 'asm', 'inline', 'inline_ref|10',
         'const', 'global',
       ],
@@ -44,11 +44,16 @@ export default function(hljs) {
     'contains': [
       // Comments
       { 'scope': 'comment', 'begin': ';;', 'end': /(?=\n)/ },
+      { 'scope': 'comment', 'begin': '//', 'end': /(?=\n)/ },
       {
         'scope': 'comment',
         'begin': '{-',
         'end': '-}',
-        'contains': ['self'],
+      },
+      {
+        'scope': 'comment',
+        'begin': '\\/\\*',
+        'end': '\\*\\/',
       },
 
       // Directives

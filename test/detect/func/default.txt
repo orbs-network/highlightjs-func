@@ -18,7 +18,6 @@ const int k = 1;
     {-
     test - is test
     -}
-    -}
 
     ;; Send message
     var message = begin_cell()
